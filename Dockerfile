@@ -1,6 +1,6 @@
 FROM ubuntu:15.10
 
-MAINTAINER Philippe Le Van <philippe.levan [at] kitpages.fr>
+MAINTAINER Philippe Le Van <philippe.levan [at] kibatic.com>
 
 RUN apt-get -qq update && \
     apt-get install -y --no-install-recommends software-properties-common && \
