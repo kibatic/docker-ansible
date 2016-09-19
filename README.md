@@ -12,7 +12,7 @@ This allows you to :
 Just add these aliases to your ~/.bash_aliases in order to use ansible as it where installed on your computer.
 
 ```bash
-alias base_ansible='docker run -it --rm --volume $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v /etc/hosts:/etc/hosts:ro -v ${HOME}:${HOME}:ro -v ${HOME}/.ssh:/root/.ssh --env ANSIBLE_HOST_KEY_CHECKING=False -w ${PWD} kitpages/docker-ansible'
+alias base_ansible='docker run -it --rm --volume $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v /etc/hosts:/etc/hosts:ro -v ${PWD}:${PWD} -v ${HOME}/.ssh:/root/.ssh --env ANSIBLE_HOST_KEY_CHECKING=False -w ${PWD} kitpages/docker-ansible'
 alias ansible='base_ansible ansible'
 alias ansible-playbook='base_ansible ansible-playbook'
 alias ansible-vault='base_ansible ansible-vault'
