@@ -15,6 +15,7 @@ alias base_ansible='docker run -it --rm --volume $SSH_AUTH_SOCK:/ssh-agent --env
 alias ansible='base_ansible ansible'
 alias ansible-playbook='base_ansible ansible-playbook'
 alias ansible-vault='base_ansible ansible-vault'
+alias ansible-galaxy='base_ansible ansible-galaxy'
 ```
 
 
