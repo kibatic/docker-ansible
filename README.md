@@ -12,7 +12,7 @@ Just add these aliases to your ~/.bash_aliases in order to use ansible as it whe
 ```bash
 export DOCKER_ANSIBLE_VERSION=2.0
 base_ansible() {
-	docker run -it --rm --volume $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v ${PWD}:${PWD} -v ${HOME}/.ssh/known_hosts:/root/.ssh/known_hosts -w ${PWD} kitpages/docker-ansible:${DOCKER_ANSIBLE_VERSION} $@
+	docker run -it --rm --env ANSIBLE_REMOTE_USER=${USER} --volume $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v ${PWD}:${PWD} -v ${HOME}/.ssh/known_hosts:/root/.ssh/known_hosts -w ${PWD} kitpages/docker-ansible:${DOCKER_ANSIBLE_VERSION} $@
 }
 alias ansible='base_ansible ansible'
 alias ansible-playbook='base_ansible ansible-playbook'
