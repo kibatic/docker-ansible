@@ -4,4 +4,4 @@ RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -qq -y vim && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    pip install ansible~=2.8.0 dnspython
+    pip install ansible~=2.8.0 dnspython boto3==1.12.12 botocore==1.15.12
