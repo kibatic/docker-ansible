@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM python:3
 
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -qq -y vim && \
