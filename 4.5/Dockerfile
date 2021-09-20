@@ -5,4 +5,4 @@ RUN apt-get update -qq && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pip install ansible~=4.0.0 paramiko
+RUN pip install ansible~=4.5.0 paramiko
